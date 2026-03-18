@@ -9,6 +9,7 @@ import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
 import gallery9 from "@/assets/gallery-9.jpg";
+import pancakesImg from "@/assets/pancakes.png";
 
 const items = [
   { src: gallery1, alt: "Gâteau Miroir", cat: "gateaux" },
@@ -20,6 +21,7 @@ const items = [
   { src: gallery7, alt: "Mini Pizza", cat: "evenements" },
   { src: gallery8, alt: "Mousse Chocolat", cat: "gateaux" },
   { src: gallery9, alt: "Pièce Montée", cat: "evenements" },
+  { src: pancakesImg, alt: "Pancakes Maison", cat: "viennoiseries", mobileOnly: true },
 ];
 
 const filters = [
@@ -64,7 +66,9 @@ const Gallery = () => {
           {filtered.map((item, i) => (
             <div
               key={`${item.cat}-${i}`}
-              className="gallery-item relative rounded-xl overflow-hidden aspect-square cursor-pointer group"
+              className={`gallery-item relative rounded-xl overflow-hidden aspect-square cursor-pointer group ${
+                (item as any).mobileOnly ? "md:hidden" : ""
+              }`}
               onClick={() => setLightbox(i)}
             >
               <img
