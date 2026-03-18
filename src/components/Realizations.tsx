@@ -31,8 +31,8 @@ const Realizations = () => (
           </div>
         ))}
       </div>
-      <div className="mt-10 sm:mt-16 text-center reveal px-4">
-        <div className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-primary/5 text-primary font-bold text-sm sm:text-base border border-primary/10 whitespace-nowrap overflow-hidden">
+      <div className="mt-10 sm:mt-16 text-center reveal px-2 sm:px-4">
+        <div className="inline-flex items-center gap-2 px-3 py-2.5 sm:px-6 sm:py-3.5 rounded-full bg-primary/5 text-primary font-bold text-[10.5px] sm:text-base border border-primary/10 whitespace-nowrap overflow-hidden">
           <i className="fas fa-truck text-secondary shrink-0" />
           <span>Disponible pour déplacement dans tout le Bénin</span>
         </div>
