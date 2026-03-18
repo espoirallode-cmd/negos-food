@@ -40,7 +40,7 @@ const Gallery = () => {
     <section id="galerie" className="py-20 md:py-28">
       <div className="container mx-auto px-6">
         <div className="text-center mb-10 reveal">
-          <h2 className="text-4xl md:text-5xl font-title mb-3 text-[#0c69e2] dark:text-foreground">Galerie</h2>
+          <h2 className="text-3xl md:text-5xl font-title mb-3 text-[#0c69e2] dark:text-foreground">Galerie</h2>
           <p className="text-muted-foreground">Un aperçu de nos créations</p>
         </div>
 
