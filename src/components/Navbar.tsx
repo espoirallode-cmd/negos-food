@@ -26,15 +26,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? "py-4 bg-white/90 dark:bg-background/90 backdrop-blur-lg border-b border-primary/5 shadow-sm"
-          : "py-6 bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#accueil" className="font-display text-2xl sm:text-4xl text-primary hover:opacity-90 transition-opacity">
+    <>
+      <nav
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+          scrolled
+            ? "py-4 bg-white/90 dark:bg-background/90 backdrop-blur-lg border-b border-primary/5 shadow-sm"
+            : "py-6 bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-6 flex justify-between items-center">
+          <a href="#accueil" className="font-display text-2xl sm:text-4xl text-primary hover:opacity-90 transition-opacity">
           Négo's Food
         </a>
 
@@ -80,12 +81,13 @@ const Navbar = () => {
             <i className={`fas ${menuOpen ? "fa-times" : "fa-bars"} text-xl sm:text-2xl`} />
           </button>
         </div>
-      </div>
+        </div>
+      </nav>
 
-      {/* Mobile menu - Fixed position with high z-index */}
+      {/* Mobile menu - Fixed position with high z-index, placed outside nav for true global z-index */}
       {menuOpen && (
         <div 
-          className="lg:hidden fixed inset-x-0 top-[64px] sm:top-[72px] bottom-0 bg-white dark:bg-background z-[100] animate-in fade-in slide-in-from-top-4 duration-300"
+          className="lg:hidden fixed inset-x-0 top-[64px] sm:top-[72px] bottom-0 bg-white/70 dark:bg-background/80 backdrop-blur-md z-[999] animate-in fade-in slide-in-from-top-4 duration-300"
           onClick={() => setMenuOpen(false)}
         >
           <ul className="container mx-auto px-6 py-10 flex flex-col items-center gap-6">
@@ -100,10 +102,10 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <li className="pt-8 w-full">
+            <li className="pt-8 w-full text-center">
               <a
                 href="#contact"
-                className="block py-4 px-8 rounded-full bg-primary text-primary-foreground font-bold text-lg text-center shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-transform"
+                className="inline-block py-3 px-6 rounded-full bg-primary text-primary-foreground font-bold text-base shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-transform"
                 onClick={() => setMenuOpen(false)}
               >
                 Commander maintenant
@@ -112,7 +114,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
-    </nav>
+    </>
   );
 };
 
