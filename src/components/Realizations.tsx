@@ -13,28 +13,28 @@ const realisations = [
 const Realizations = () => (
   <section className="py-24 md:py-32 bg-white dark:bg-background">
     <div className="container mx-auto px-6">
-      <div className="text-center mb-20 reveal">
-        <h2 className="text-3xl md:text-5xl font-title mb-6 text-[#0c69e2] dark:text-foreground">Nos Réalisations</h2>
-        <p className="text-muted-foreground text-lg max-w-3xl mx-auto">Découvrez quelques-uns de nos projets réalisés avec passion à travers le Bénin.</p>
+      <div className="text-center mb-12 sm:mb-20 reveal px-4">
+        <h2 className="text-2xl sm:text-5xl font-title mb-6 text-[#0c69e2] dark:text-foreground">Nos Réalisations</h2>
+        <p className="text-muted-foreground text-sm sm:text-lg max-w-3xl mx-auto">Découvrez quelques-uns de nos projets réalisés avec passion à travers le Bénin.</p>
       </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
         {realisations.map((r, i) => (
-          <div key={i} className="reveal group bg-white dark:bg-card rounded-[2rem] overflow-hidden border border-primary/5 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500">
+          <div key={i} className="reveal group bg-white dark:bg-card rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-primary/5 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 w-full max-w-[320px] mx-auto sm:max-w-none">
             <div className="aspect-[4/5] overflow-hidden">
               <img src={r.img} alt={r.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
             </div>
-            <div className="p-8 group-hover:bg-primary/5 transition-colors">
-              <span className="inline-block text-[11px] font-bold text-white bg-secondary px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest shadow-lg shadow-secondary/20">{r.badge}</span>
-              <h3 className="text-xl font-bold mb-2 text-primary">{r.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
+            <div className="p-6 sm:p-8 group-hover:bg-primary/5 transition-colors">
+              <span className="inline-block text-[10px] sm:text-[11px] font-bold text-white bg-secondary px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest shadow-lg shadow-secondary/20">{r.badge}</span>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 text-primary">{r.title}</h3>
+              <p className="text-[13px] sm:text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
             </div>
           </div>
         ))}
       </div>
-      <div className="mt-16 text-center reveal">
-        <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary/5 text-primary font-bold text-sm border border-primary/10">
+      <div className="mt-10 sm:mt-16 text-center reveal px-4">
+        <div className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-primary/5 text-primary font-bold text-[11px] sm:text-sm border border-primary/10">
           <i className="fas fa-truck text-secondary" />
-          Disponible pour déplacement dans tout le Bénin et la sous-région
+          Disponible pour déplacement dans tout le Bénin
         </div>
       </div>
     </div>
