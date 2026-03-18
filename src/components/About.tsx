@@ -60,7 +60,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row lg:items-stretch justify-center gap-12 lg:gap-16 xl:gap-24">
           
           {/* Left Side: Content */}
-          <div className="reveal order-1 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start lg:max-w-3xl lg:justify-center px-4 sm:px-0">
+          <div className="reveal order-1 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start lg:max-w-3xl lg:justify-between lg:self-stretch px-4 sm:px-0">
             <div className="flex flex-col items-center lg:items-start">
               <span className="inline-flex items-center gap-2 text-[#0c69e2] font-semibold tracking-wider uppercase text-[13px] sm:text-sm mb-4">
                 <i className="fas fa-circle-check text-base" />
@@ -77,7 +77,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="mt-8 lg:mt-10 w-full sm:w-auto">
+            <div className="mt-8 lg:mt-0 w-full sm:w-auto">
               <a 
                 href="#contact" 
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-[#0c69e2] text-white px-6 py-3.5 rounded-full font-bold text-sm sm:text-base shadow-xl shadow-[#0c69e2]/20 hover:bg-[#0c69e2]/90 transition-all hover:translate-x-1 group active:scale-95 whitespace-nowrap"
