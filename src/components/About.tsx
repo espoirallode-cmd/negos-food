@@ -57,7 +57,7 @@ const About = () => {
   return (
     <section id="propos" className="py-24 md:py-32 bg-white dark:bg-background overflow-hidden px-4 md:px-0">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-stretch justify-center gap-12 lg:gap-24 xl:gap-40">
+        <div className="flex flex-col lg:flex-row lg:items-stretch justify-center gap-12 lg:gap-16 xl:gap-24">
           
           {/* Left Side: Content */}
           <div className="reveal order-1 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start lg:max-w-3xl lg:justify-center px-4 sm:px-0">
