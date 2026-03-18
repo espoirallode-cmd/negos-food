@@ -80,7 +80,7 @@ const About = () => {
             <div className="mt-8 lg:mt-0 w-full sm:w-auto">
               <a 
                 href="#contact" 
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-[#0c69e2] text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl shadow-[#0c69e2]/20 hover:bg-[#0c69e2]/90 transition-all hover:translate-x-2 group active:scale-95"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-[#0c69e2] text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl shadow-[#0c69e2]/20 hover:bg-[#0c69e2]/90 transition-all hover:translate-x-2 group active:scale-95 whitespace-nowrap"
               >
                 Réserver une création
                 <i className="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform" />
@@ -90,7 +90,7 @@ const About = () => {
 
           {/* Photo Column */}
           <div className="reveal order-2 lg:order-2 flex justify-center lg:justify-start mt-8 lg:mt-0">
-            <div className="relative max-w-[360px] sm:max-w-[420px] w-full pb-8 sm:pb-12">
+            <div className="relative max-w-[360px] sm:max-w-[420px] w-full">
               {/* The Main Portrait Container */}
               <div className="relative z-10 rounded-3xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl w-full">
                 <img 
@@ -100,8 +100,8 @@ const About = () => {
                 />
               </div>
 
-              {/* Stats Overlay */}
-              <div className="absolute -bottom-4 left-0 right-0 z-20 flex justify-center gap-1.5 sm:gap-4 px-2 sm:px-4">
+              {/* Stats Overlay - Overlapping the photo */}
+              <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-1.5 sm:gap-4 px-2 sm:px-4">
                 {stats.map((stat, i) => (
                   <div 
                     key={i} 
