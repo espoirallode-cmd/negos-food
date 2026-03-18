@@ -63,7 +63,7 @@ const Hero = () => {
       <div className="w-full mt-12 mb-4">
         <ScrollVelocity 
           texts={scrollingTexts} 
-          velocity={15} 
+          velocity={25} 
           className="font-title tracking-widest"
         />
       </div>
