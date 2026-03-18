@@ -70,34 +70,40 @@ const Navbar = () => {
           </a>
 
           <button
-            className="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center text-foreground hover:bg-primary/5 transition-all"
-            onClick={() => setMenuOpen(!menuOpen)}
+            className="lg:hidden relative z-50 w-11 h-11 rounded-full flex items-center justify-center text-foreground hover:bg-primary/5 transition-all active:scale-95 sm:w-12 sm:h-12"
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen(!menuOpen);
+            }}
             aria-label="Menu"
           >
-            <i className={`fas ${menuOpen ? "fa-times" : "fa-bars"} text-lg`} />
+            <i className={`fas ${menuOpen ? "fa-times" : "fa-bars"} text-xl sm:text-2xl`} />
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - Fixed position with high z-index */}
       {menuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-full bg-white dark:bg-background border-b border-primary/5 shadow-xl animate-in fade-in slide-in-from-top-4 duration-300">
-          <ul className="container mx-auto px-6 py-8 flex flex-col gap-5">
+        <div 
+          className="lg:hidden fixed inset-x-0 top-[64px] sm:top-[72px] bottom-0 bg-white dark:bg-background z-[100] animate-in fade-in slide-in-from-top-4 duration-300"
+          onClick={() => setMenuOpen(false)}
+        >
+          <ul className="container mx-auto px-6 py-10 flex flex-col items-center gap-6">
             {links.map((l) => (
-              <li key={l.href}>
+              <li key={l.href} className="w-full text-center">
                 <a
                   href={l.href}
-                  className="block text-lg font-medium text-foreground/70 hover:text-primary transition-colors"
+                  className="block text-2xl font-bold text-foreground/80 hover:text-primary transition-colors py-2"
                   onClick={() => setMenuOpen(false)}
                 >
                   {l.label}
                 </a>
               </li>
             ))}
-            <li className="pt-4">
+            <li className="pt-8 w-full">
               <a
                 href="#contact"
-                className="block py-4 px-6 rounded-xl bg-primary text-primary-foreground font-semibold text-center shadow-lg shadow-primary/20"
+                className="block py-4 px-8 rounded-full bg-primary text-primary-foreground font-bold text-lg text-center shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-transform"
                 onClick={() => setMenuOpen(false)}
               >
                 Commander maintenant
