@@ -62,12 +62,12 @@ const About = () => {
           {/* Left Side: Content */}
           <div className="reveal order-1 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start lg:max-w-xl lg:justify-between lg:self-stretch px-4 sm:px-0">
             <div className="flex flex-col items-center lg:items-start">
-              <span className="inline-flex items-center gap-2 text-[#0c69e2] font-semibold tracking-wider uppercase text-xs mb-4">
+              <span className="inline-flex items-center gap-2 text-[#0c69e2] font-semibold tracking-wider uppercase text-[13px] sm:text-sm mb-4">
                 <i className="fas fa-circle-check text-base" />
                 Chef DHOSSOU Abed Négo
               </span>
               
-              <h2 className="text-2xl sm:text-4xl lg:text-7xl font-semibold text-slate-900 dark:text-foreground leading-[1.2] lg:leading-[1.1] mb-6">
+              <h2 className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-slate-900 dark:text-foreground leading-[1.2] lg:leading-[1.1] mb-6">
                 Passion <span className="italic font-title text-[#0c69e2]">Culinaire</span> <br className="hidden sm:block" />
                 <span>Que Vous Méritez.</span>
               </h2>
@@ -80,7 +80,7 @@ const About = () => {
             <div className="mt-8 lg:mt-0 w-full sm:w-auto">
               <a 
                 href="#contact" 
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-[#0c69e2] text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl shadow-[#0c69e2]/20 hover:bg-[#0c69e2]/90 transition-all hover:translate-x-2 group active:scale-95 whitespace-nowrap"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-[#0c69e2] text-white px-6 py-3.5 rounded-full font-bold text-sm sm:text-base shadow-xl shadow-[#0c69e2]/20 hover:bg-[#0c69e2]/90 transition-all hover:translate-x-1 group active:scale-95 whitespace-nowrap"
               >
                 Réserver une création
                 <i className="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform" />
