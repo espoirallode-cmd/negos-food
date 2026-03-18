@@ -14,7 +14,7 @@ const Realizations = () => (
   <section className="py-24 md:py-32 bg-white dark:bg-background">
     <div className="container mx-auto px-6">
       <div className="text-center mb-20 reveal">
-        <h2 className="text-4xl md:text-5xl font-title mb-6 text-[#0c69e2] dark:text-foreground">Nos Réalisations</h2>
+        <h2 className="text-3xl md:text-5xl font-title mb-6 text-[#0c69e2] dark:text-foreground">Nos Réalisations</h2>
         <p className="text-muted-foreground text-lg max-w-3xl mx-auto">Découvrez quelques-uns de nos projets réalisés avec passion à travers le Bénin.</p>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

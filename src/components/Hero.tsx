@@ -17,23 +17,23 @@ const Hero = () => {
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-5 items-center flex-grow">
         <div className="relative z-10 text-center lg:text-left flex flex-col items-center lg:items-start w-full">
           {/* Badge removed */}
-          <h1 className="reveal text-primary text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-title tracking-tight leading-[1.2] lg:leading-[1.08] mb-6">
+          <h1 className="reveal text-primary text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-title tracking-tight leading-[1.3] lg:leading-[1.08] mb-6">
             <span className="block lg:inline sm:whitespace-nowrap">L'Art de Sublimer</span> <br className="hidden lg:block" />
             <span className="block lg:inline sm:whitespace-nowrap"><span className="italic text-primary/80">Chaque Instant</span> Sucré</span>
           </h1>
-          <p className="reveal text-muted-foreground text-sm sm:text-base md:text-lg mb-8 max-w-xl font-light leading-relaxed mx-auto lg:mx-0">
+          <p className="reveal text-muted-foreground text-[13px] sm:text-base md:text-lg mb-8 max-w-xl font-light leading-relaxed mx-auto lg:mx-0">
             Des créations artisanales sur-mesure pour vos événements les plus prestigieux. L'excellence à chaque bouchée.
           </p>
-          <div className="reveal flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto px-4 sm:px-0">
+          <div className="reveal flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full sm:w-auto px-4 sm:px-0">
             <a
               href="#galerie"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all hover:-translate-y-1 active:scale-95"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-primary text-primary-foreground text-sm sm:text-base font-bold shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all hover:-translate-y-1 active:scale-95 text-center"
             >
               Commander maintenant
             </a>
             <a
               href="#contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-full border-2 border-primary text-primary bg-white font-bold hover:bg-primary hover:text-white transition-all active:scale-95 text-center"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full border-2 border-primary text-primary bg-white text-sm sm:text-base font-bold hover:bg-primary hover:text-white transition-all active:scale-95 text-center"
             >
               Nous contacter
             </a>

@@ -29,7 +29,7 @@ const Pricing = () => (
   <section id="tarifs" className="py-24 md:py-36 bg-slate-50 dark:bg-background/20 overflow-hidden">
     <div className="container mx-auto px-6">
       <div className="text-center mb-24 reveal">
-        <h2 className="text-4xl md:text-6xl font-title mb-6 text-[#0c69e2] dark:text-foreground">Nos Formules</h2>
+        <h2 className="text-3xl md:text-6xl font-title mb-6 text-[#0c69e2] dark:text-foreground">Nos Formules</h2>
         <p className="text-slate-600 dark:text-muted-foreground text-lg max-w-xl mx-auto">Choisissez la perfection pour vos instants sucrés.</p>
       </div>
 
