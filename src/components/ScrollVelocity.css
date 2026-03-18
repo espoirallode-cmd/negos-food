@@ -1,0 +1,46 @@
+.scroll-velocity-wrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: .8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.scroller span {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between text and icons */
+  font-family: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.25rem; /* Reduced size */
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .scroller span {
+    font-size: 1.75rem; /* Reduced size */
+  }
+}
+
+.scroller i {
+  font-size: 0.8em;
+  opacity: 1; /* Make stars clear */
+}

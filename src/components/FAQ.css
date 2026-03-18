@@ -1,0 +1,256 @@
+/* Based on Uiverse.io by zeeshan_2112 - Adapted for Egos Sugar Craft FAQ */
+.faq-modern-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.offer-card {
+  --bg-color: #ffffff;
+  --bg-color-light: #f8fafc;
+  --bg-hover: #f1f5f9;
+  --border-color: rgba(0, 0, 0, 0.05);
+  --border-hover: rgba(12, 105, 226, 0.2);
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --accent-primary: #0c69e2; /* Brand Blue */
+  --accent-primary-rgb: 12, 105, 226;
+  --accent-bg: rgba(12, 105, 226, 0.1);
+
+  width: 100%;
+  max-width: 800px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2em;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-primary);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dark .offer-card {
+  --bg-color: #0b0c10;
+  --bg-color-light: rgba(255, 255, 255, 0.05); /* Glacial base */
+  --bg-hover: rgba(255, 255, 255, 0.08); /* Frosty hover */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --accent-bg: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Glassmorphism/Glacial effect for dark mode cards */
+.dark .offer-card__option-content {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.dark .offer-card__option:hover .offer-card__option-content {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark .offer-card__option--active .offer-card__option-content {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Left glow effect */
+.offer-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -40px;
+  width: 100px;
+  height: 60%;
+  background: var(--accent-primary);
+  filter: blur(80px);
+  z-index: 0;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.offer-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.offer-card__header {
+  text-align: center;
+  margin-bottom: 2.5em;
+}
+
+.offer-card__title {
+  margin: 0 0 0.3em 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.offer-card__subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  padding: 0 0.5em;
+}
+
+/* Options (Questions) */
+.offer-card__options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-bottom: 1.5em;
+}
+
+.offer-card__option {
+  cursor: pointer;
+  display: block;
+  user-select: none;
+  position: relative;
+}
+
+.offer-card__option-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2em 1.5em;
+  background: var(--bg-color-light);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.offer-card__option-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.offer-card__option:hover .offer-card__option-content {
+  background: var(--bg-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.offer-card__option--active .offer-card__option-content {
+  border-color: rgba(var(--accent-primary-rgb), 0.5);
+  background: rgba(var(--accent-primary-rgb), 0.03);
+  box-shadow: 0 10px 20px rgba(var(--accent-primary-rgb), 0.05);
+}
+
+/* Icon Wrapper inside option */
+.offer-card__option-icon-wrapper {
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-bg);
+  color: var(--accent-primary);
+  margin-right: 1.2em;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.offer-card__option-text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.offer-card__option-title {
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+
+/* Answer content */
+.offer-card__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  padding-left: 4.4em; /* Align with text under icon */
+}
+
+.offer-card__option--active .offer-card__answer {
+  max-height: 200px;
+  opacity: 1;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+.offer-card__answer p {
+  font-size: 0.95em;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Right arrow inside option */
+.offer-card__option-arrow {
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.dark .offer-card__option-arrow {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.offer-card__option--active .offer-card__option-arrow {
+  transform: rotate(180deg);
+  background: var(--accent-primary);
+  color: white;
+}
+
+/* Footer */
+.offer-card__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.offer-card__btn {
+  background: var(--accent-primary);
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 2em;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(var(--accent-primary-rgb), 0.2);
+}
+
+.offer-card__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(var(--accent-primary-rgb), 0.3);
+  filter: brightness(1.1);
+}
+
+.offer-card__btn:active {
+  transform: scale(0.96);
+}

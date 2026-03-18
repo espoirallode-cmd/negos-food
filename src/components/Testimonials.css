@@ -1,0 +1,115 @@
+/* Based on Uiverse.io by ashwin_5681 - Adapted for Egos Sugar Craft Testimonials */
+.testimonials-slider-wrapper {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+}
+
+.slider .list {
+  display: flex;
+  gap: 1rem; /* The much requested reduced gap spacing here */
+  width: max-content;
+  animation: scrollMarquee 30s linear infinite;
+}
+
+.slider .list:hover {
+  animation-play-state: paused;
+}
+
+.slider .list .item {
+  width: 320px;
+  flex-shrink: 0;
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.slider .list .item .testimonial-card {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background: white;
+  border: 1px solid rgba(12, 105, 226, 0.1);
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.dark .slider .list .item .testimonial-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-card p.quote {
+  font-size: 1.125rem;
+  color: #475569;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.dark .testimonial-card p.quote {
+  color: #f1f5f9;
+}
+
+.testimonial-card .client-name {
+  font-weight: 700;
+  color: #0c69e2;
+  font-size: 1rem;
+}
+
+.dark .testimonial-card .client-name {
+  color: #60a5fa; /* Lighter blue for dark mode readability */
+}
+
+.testimonial-card .client-event {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+}
+
+@keyframes scrollMarquee {
+  to {
+    transform: translateX(calc(-50% - 0.5rem)); /* Move halfway minus half the gap */
+  }
+}
+
+.slider .item:hover {
+  filter: grayscale(0) blur(0);
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.slider:hover .item:not(:hover) {
+  filter: grayscale(1) blur(2px);
+  opacity: 0.6;
+}
+
+.slider .item:hover .testimonial-card {
+  border-color: #0c69e2;
+  box-shadow: 0 15px 40px rgba(12, 105, 226, 0.15);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .slider {
+    mask-image: linear-gradient(to right, transparent, #000 5% 95%, transparent);
+  }
+}

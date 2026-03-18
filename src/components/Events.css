@@ -1,0 +1,103 @@
+/* Based on Uiverse.io by Gaurav-WebDev - Adapted for Egos Sugar Craft */
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .events-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.events-container .event-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding: 24px;
+  text-align: left;
+  min-height: 120px;
+  width: 100%;
+  border-radius: 1.5rem;
+  color: #1e293b;
+  background-color: white;
+  cursor: pointer;
+  transition: 400ms transform, 400ms box-shadow, 400ms background-color, 400ms filter;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(12, 105, 226, 0.1);
+}
+
+.dark .events-container .event-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark .event-card h3 {
+  color: #ffffff;
+}
+
+.event-card .icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 1rem;
+  background-color: rgba(12, 105, 226, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+  transition: 400ms transform;
+}
+
+.event-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.event-card p {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.dark .event-card p {
+  color: #94a3b8;
+}
+
+/* The Hover Effect from User */
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(12, 105, 226, 0.15);
+  background-color: #0c69e2;
+  color: white;
+  border-color: #0c69e2;
+}
+
+.event-card:hover .icon-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.event-card:hover .icon-box i {
+  color: white;
+}
+
+.event-card:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Blur others when parent is hovered */
+.events-container:hover > .event-card:not(:hover) {
+  filter: blur(4px);
+  transform: scale(0.95);
+  opacity: 0.6;
+}

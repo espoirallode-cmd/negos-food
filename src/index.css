@@ -1,0 +1,277 @@
+@font-face {
+  font-family: 'Cream Cake';
+  src: url('https://fonts.cdnfonts.com/s/29428/CreamCake.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roxaine Serif';
+  src: url('/fonts/RoxaineSerifItalic_PERSONAL_USE_ONLY.otf') format('opentype');
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;           /* 60% - Blanc pur pour les fonds */
+    --foreground: 214 50% 15%;        /* Texte sombre sur fond clair */
+    --card: 0 0% 100%;                /* 60% - Cartes blanches */
+    --card-foreground: 214 50% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 50% 15%;
+    --primary: 214 85% 47%;           /* 30% - Bleu Royal #0c69e2 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 39 86% 49%;          /* 10% - Doré #e69d12 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 214 20% 95%;
+    --muted-foreground: 214 20% 45%;
+    --accent: 39 86% 49%;             /* 10% - Doré accent */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 214 85% 47%;
+    --radius: 1rem;
+    --surface: 214 30% 97%;           /* 60% - Fond légèrement bleuté pour alterner */
+    --nav-bg: 0 0% 100% / 0.85;
+  }
+
+  .dark {
+    --background: 214 40% 8%;
+    --foreground: 0 0% 98%;
+    --card: 214 40% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 214 40% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 214 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 39 86% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 214 30% 15%;
+    --muted-foreground: 214 15% 65%;
+    --accent: 39 86% 55%;
+    --accent-foreground: 0 0% 100%;
+    --border: 214 30% 20%;
+    --input: 214 30% 20%;
+    --ring: 214 85% 55%;
+    --surface: 214 40% 12%;
+    --nav-bg: 214 40% 8% / 0.85;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Pacifico', cursive;
+  }
+  .font-body {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Rest of the animations... */
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes bounce-soft {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+.animate-bounce-soft {
+  animation: bounce-soft 2s infinite;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s base, opacity 0.3s base, padding 0.3s base;
+}
+.faq-item.active .faq-content {
+  max-height: 300px;
+  opacity: 1;
+}
+.faq-item .faq-chevron {
+  transition: transform 0.4s base;
+}
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          MOBILE OPTIMIZATIONS (< 768px)                    */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* 1. MISE EN PAGE & ALIGNEMENT */
+  section, 
+  .container,
+  main > div,
+  .flex:not(.scroll-velocity-container):not(.navbar-items),
+  .lg\:flex-row,
+  .md\:flex-row {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Force horizontal layout for specific nav/app-bar elements */
+  nav .container, .flex-row.justify-between, .navbar-content {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .items-start, .lg\:items-start {
+    align-items: center !important;
+  }
+
+  .text-left, .lg\:text-left {
+    text-align: center !important;
+  }
+
+  /* 2. TYPOGRAPHIE */
+  h1, .text-4xl, .text-5xl, .text-6xl, .text-7xl {
+    font-size: clamp(2rem, 10vw, 2.5rem) !important;
+    line-height: 1.1 !important;
+  }
+  
+  h2, .text-3xl {
+    font-size: clamp(1.5rem, 8vw, 2rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  p, .text-lg, .text-base {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .text-xs, .text-\[11px\], .text-\[12px\] {
+    font-size: 12px !important;
+  }
+
+  /* 3. ESPACEMENTS */
+  .py-24, .py-32, .md\:py-32, .py-36 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .px-6, .px-10 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .mb-12, .mb-16, .mb-20, .mb-24 {
+    margin-bottom: 2rem !important;
+  }
+
+  [class*="gap-"] {
+    gap: 1.5rem !important;
+  }
+
+  html, body {
+    overflow-x: hidden !important;
+    width: 100vw;
+  }
+
+  /* 4. IMAGES */
+  img:not(.logo), 
+  [class*="max-w-\["], 
+  [class*="w-\["],
+  .w-full {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 5. BOUTONS */
+  a[href^="#"], 
+  button:not(.nav-toggle):not(.theme-toggle), 
+  .inline-flex.items-center:not(.nav-link) {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    min-height: 3.5rem;
+  }
+
+  /* 6. GRILLES */
+  .grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    width: 100% !important;
+  }
+
+  /* 7. SCROLL VELOCITY EXCLUSION */
+  .scroll-velocity-container, .velocity-text {
+    flex-direction: row !important;
+    width: max-content !important;
+  }
+
+  /* 8. HERO */
+  #accueil {
+    min-height: auto !important;
+    padding-top: 7rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
