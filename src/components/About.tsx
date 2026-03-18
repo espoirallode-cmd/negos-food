@@ -60,7 +60,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row lg:items-stretch justify-center gap-12 lg:gap-24 xl:gap-40">
           
           {/* Left Side: Content */}
-          <div className="reveal order-1 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start lg:max-w-xl lg:justify-between lg:self-stretch px-4 sm:px-0">
+          <div className="reveal order-1 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start lg:max-w-3xl lg:justify-between lg:self-stretch px-4 sm:px-0">
             <div className="flex flex-col items-center lg:items-start">
               <span className="inline-flex items-center gap-2 text-[#0c69e2] font-semibold tracking-wider uppercase text-[13px] sm:text-sm mb-4">
                 <i className="fas fa-circle-check text-base" />
@@ -68,8 +68,8 @@ const About = () => {
               </span>
               
               <h2 className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-slate-900 dark:text-foreground leading-[1.2] lg:leading-[1.1] mb-6 flex flex-col items-center lg:items-start">
-                <span>Passion <span className="italic font-title text-[#0c69e2]">Culinaire</span></span>
-                <span>Que Vous Méritez.</span>
+                <span className="lg:whitespace-nowrap">Passion <span className="italic font-title text-[#0c69e2]">Culinaire</span></span>
+                <span className="lg:whitespace-nowrap">Que Vous Méritez.</span>
               </h2>
               
               <p className="text-slate-600 dark:text-muted-foreground text-sm sm:text-base lg:text-lg mb-0 leading-relaxed max-w-lg mx-auto lg:mx-0">
