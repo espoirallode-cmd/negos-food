@@ -11,7 +11,7 @@ const faqData = [
 ];
 
 const FAQ = () => {
-  const [active, setActive] = useState<number | null>(0);
+  const [active, setActive] = useState<number | null>(null);
 
   return (
     <section id="faq" className="py-24 md:py-32 bg-slate-50 dark:bg-background/50 overflow-hidden">
