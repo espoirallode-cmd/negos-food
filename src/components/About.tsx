@@ -68,8 +68,8 @@ const About = () => {
               </span>
               
               <h2 className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-slate-900 dark:text-foreground leading-[1.2] lg:leading-[1.1] mb-6">
-                Passion <span className="italic font-title text-[#0c69e2]">Culinaire</span> <br className="hidden sm:block" />
-                <span>Que Vous Méritez.</span>
+                <span className="block lg:inline">Passion <span className="italic font-title text-[#0c69e2]">Culinaire</span> </span>
+                <span className="block lg:inline">Que Vous Méritez.</span>
               </h2>
               
               <p className="text-slate-600 dark:text-muted-foreground text-sm sm:text-base lg:text-lg mb-0 leading-relaxed max-w-lg mx-auto lg:mx-0">
