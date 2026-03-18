@@ -101,7 +101,7 @@ const About = () => {
               </div>
 
               {/* Stats Overlay - Overlapping the bottom edge as requested */}
-                <div className="absolute -bottom-5 sm:bottom-6 left-0 right-0 z-20 flex justify-center gap-1.5 sm:gap-4 px-2 sm:px-4">
+                <div className="absolute -bottom-5 sm:-bottom-10 left-0 right-0 z-20 flex justify-center gap-1.5 sm:gap-4 px-2 sm:px-4">
                 {stats.map((stat, i) => (
                   <div 
                     key={i} 
