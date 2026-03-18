@@ -10,9 +10,9 @@ const events = [
 const Events = () => (
   <section id="evenements" className="py-24 md:py-32 bg-white dark:bg-background overflow-hidden">
     <div className="container mx-auto px-6">
-      <div className="text-center mb-20 reveal">
-        <h2 className="text-4xl md:text-5xl font-title mb-6 leading-tight text-[#0c69e2] dark:text-foreground">Occasions & Événements</h2>
-        <p className="text-slate-600 dark:text-muted-foreground text-lg max-w-2xl mx-auto">Pour chaque moment, une création unique qui raconte votre histoire.</p>
+      <div className="text-center mb-12 sm:mb-20 reveal px-4">
+        <h2 className="text-3xl md:text-5xl font-title mb-6 leading-tight text-[#0c69e2] dark:text-foreground">Occasions & Événements</h2>
+        <p className="text-slate-600 dark:text-muted-foreground text-sm sm:text-lg max-w-2xl mx-auto">Pour chaque moment, une création unique qui raconte votre histoire.</p>
       </div>
       
       <div className="events-container reveal">
