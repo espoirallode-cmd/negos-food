@@ -35,7 +35,7 @@ const Realizations = () => (
         <div className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-primary/5 text-primary font-bold text-sm sm:text-base border border-primary/10">
           <i className="fas fa-truck text-secondary shrink-0" />
           <span className="text-center sm:text-left">
-            Disponible pour déplacement dans tout le Bénin <br className="sm:hidden" /> et la sous-région
+            Disponible pour déplacement <br className="sm:hidden" /> dans tout le Bénin et la sous-région
           </span>
         </div>
       </div>
