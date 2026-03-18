@@ -34,7 +34,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#accueil" className="font-display text-4xl text-primary hover:opacity-90 transition-opacity">
+        <a href="#accueil" className="font-display text-2xl sm:text-4xl text-primary hover:opacity-90 transition-opacity">
           Négo's Food
         </a>
 
