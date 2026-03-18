@@ -53,7 +53,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-2 sm:gap-4 items-center">
           <button
             onClick={toggleTheme}
             className="w-10 h-10 rounded-xl flex items-center justify-center text-foreground/60 hover:bg-primary/5 hover:text-primary transition-all"
@@ -61,12 +61,14 @@ const Navbar = () => {
           >
             <i className={`fas ${dark ? "fa-sun" : "fa-moon"} text-lg`} />
           </button>
+          
           <a
             href="#contact"
-            className="hidden sm:inline-flex items-center gap-2 px-8 py-2.5 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-xl shadow-primary/30 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all active:scale-95"
+            className="hidden lg:inline-flex items-center gap-2 px-8 py-2.5 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-xl shadow-primary/30 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all active:scale-95"
           >
             Commander
           </a>
+
           <button
             className="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center text-foreground hover:bg-primary/5 transition-all"
             onClick={() => setMenuOpen(!menuOpen)}
