@@ -21,8 +21,10 @@ const Hero = () => {
             <span className="block lg:inline">L'Art de Sublimer</span> <br className="hidden lg:block" />
             <span className="block lg:inline"><span className="italic text-primary/80">Chaque Instant</span> Sucré</span>
           </h1>
-          <p className="reveal text-muted-foreground text-[13px] sm:text-base md:text-lg mb-8 max-w-xl font-light leading-relaxed mx-auto lg:mx-0">
-            Des créations artisanales sur-mesure pour vos événements les plus prestigieux. L'excellence à chaque bouchée.
+          <p className="reveal text-muted-foreground text-[14px] sm:text-base md:text-lg mb-8 max-w-xl font-light leading-relaxed mx-auto lg:mx-0 text-center lg:text-left">
+            Des créations artisanales sur-mesure <br className="sm:hidden" />
+            pour vos événements les plus prestigieux. <br className="sm:hidden" />
+            L'excellence à chaque bouchée.
           </p>
           <div className="reveal flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full sm:w-auto px-4 sm:px-0">
             <a
