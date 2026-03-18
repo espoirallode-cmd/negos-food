@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="relative z-10 flex flex-col items-center lg:items-start w-full lg:w-1/2">
           <h1 className="reveal text-primary text-[26px] sm:text-4xl md:text-6xl lg:text-7xl font-title tracking-tight leading-[1.3] lg:leading-[1.08] mb-6 text-center lg:text-left w-full">
             <span className="block lg:inline">L'Art de Sublimer</span> <br className="hidden lg:block" />
-            <span className="block lg:inline"><span className="italic text-primary/80">Chaque Instant</span> Sucré</span>
+            <span className="block lg:inline lg:whitespace-nowrap"><span className="italic text-primary/80">Chaque Instant</span> Sucré</span>
           </h1>
           <p className="reveal text-muted-foreground text-[14px] sm:text-base md:text-lg mb-8 max-w-xl font-light leading-relaxed text-center lg:text-left">
             Des créations artisanales sur-mesure <br className="sm:hidden" />
