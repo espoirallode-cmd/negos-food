@@ -101,13 +101,13 @@ const About = () => {
               </div>
 
               {/* Stats Overlay - Overlapping the bottom edge as requested */}
-              <div className="absolute -bottom-5 sm:bottom-6 left-0 right-0 z-20 flex justify-center gap-1.5 sm:gap-4 px-2 sm:px-4">
+                <div className="absolute -bottom-5 sm:bottom-6 left-0 right-0 z-20 flex justify-center gap-1.5 sm:gap-4 px-2 sm:px-4">
                 {stats.map((stat, i) => (
                   <div 
                     key={i} 
-                    className="bg-white dark:bg-card p-1.5 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl flex-1 text-center border border-slate-100 dark:border-white/5"
+                    className="bg-white dark:bg-[#0c69e2] p-1.5 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl flex-1 text-center border border-slate-100 dark:border-white/10"
                   >
-                    <div className="text-sm sm:text-2xl font-bold text-[#0c69e2] mb-0.5 sm:mb-1">
+                    <div className="text-sm sm:text-2xl font-bold text-[#0c69e2] dark:text-white mb-0.5 sm:mb-1">
                       <Counter target={stat.target} suffix={stat.suffix} />
                     </div>
                     <div className="text-[7px] sm:text-[10px] font-bold text-slate-900 dark:text-white uppercase tracking-tighter leading-tight">{stat.label}</div>
