@@ -15,7 +15,9 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-16">
             <div className="lg:col-span-3 reveal">
-              <h2 className="text-4xl md:text-5xl font-title mb-10 text-[#0c69e2] dark:text-foreground">Donnons vie à votre projet</h2>
+              <h2 className="text-3xl md:text-5xl font-title mb-10 text-[#0c69e2] dark:text-foreground leading-tight">
+                Donnons vie <br className="sm:hidden" /> à votre projet
+              </h2>
               {submitted ? (
                 <div className="bg-primary/5 border border-primary/20 rounded-[2rem] p-12 text-center animate-in zoom-in duration-500">
                   <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl shadow-primary/20">
