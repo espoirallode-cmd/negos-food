@@ -46,6 +46,9 @@ const Hero = () => {
             <img 
               src={cakeHero} 
               alt="Gâteau d'exception" 
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
               className="w-full h-auto object-contain transform group-hover:scale-110 transition-transform duration-700 drop-shadow-2xl"
             />
           </div>

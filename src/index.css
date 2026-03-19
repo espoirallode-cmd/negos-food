@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Cream Cake';
   src: url('https://fonts.cdnfonts.com/s/29428/CreamCake.woff') format('woff');
+  font-display: swap;
 }
 
 @font-face {

@@ -1,17 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Specialties from "@/components/Specialties";
-import Gallery from "@/components/Gallery";
-import Events from "@/components/Events";
-import Pricing from "@/components/Pricing";
-import Realizations from "@/components/Realizations";
-import Testimonials from "@/components/Testimonials";
-import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
+
+// Lazy load des sections non critiques (sous la ligne de flottaison)
+const Specialties = lazy(() => import("@/components/Specialties"));
+const Gallery = lazy(() => import("@/components/Gallery"));
+const Events = lazy(() => import("@/components/Events"));
+const Pricing = lazy(() => import("@/components/Pricing"));
+const Realizations = lazy(() => import("@/components/Realizations"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const Contact = lazy(() => import("@/components/Contact"));
+const Footer = lazy(() => import("@/components/Footer"));
+const WhatsAppFloat = lazy(() => import("@/components/WhatsAppFloat"));
 
 const Index = () => {
   useEffect(() => {
@@ -35,16 +37,18 @@ const Index = () => {
       <Navbar />
       <Hero />
       <About />
-      <Specialties />
-      <Gallery />
-      <Events />
-      <Pricing />
-      <Realizations />
-      <Testimonials />
-      <FAQ />
-      <Contact />
-      <Footer />
-      <WhatsAppFloat />
+      <Suspense fallback={null}>
+        <Specialties />
+        <Gallery />
+        <Events />
+        <Pricing />
+        <Realizations />
+        <Testimonials />
+        <FAQ />
+        <Contact />
+        <Footer />
+        <WhatsAppFloat />
+      </Suspense>
     </>
   );
 };

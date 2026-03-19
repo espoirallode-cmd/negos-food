@@ -96,6 +96,8 @@ const About = () => {
                 <img 
                   src={chefImg} 
                   alt="Portrait du Chef DHOSSOU Abed Négo" 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full aspect-[4/5] object-cover scale-105 hover:scale-100 transition-transform duration-1000"
                 />
               </div>

@@ -11,8 +11,11 @@
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome chargé en non-bloquant pour ne pas retarder le rendu -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <meta property="og:title" content="N&#39;égo&#39;s Food | L&#39;Art de Sublimer Chaque Instant Sucré">
   <meta name="twitter:title" content="N&#39;égo&#39;s Food | L&#39;Art de Sublimer Chaque Instant Sucré">
   <meta property="og:description" content="Chef Pâtissier DHOSSOU Abed Négo - Créations sur-mesure pour vos événements : gâteaux, glaces, viennoiseries.">
