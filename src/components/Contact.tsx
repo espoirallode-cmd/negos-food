@@ -13,7 +13,7 @@ const Contact = () => {
     <section id="contact" className="py-16 md:py-32 bg-[#F9FBF9] dark:bg-background overflow-hidden px-4 md:px-0">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-5 gap-10 sm:gap-16 max-w-[340px] lg:max-w-none mx-auto">
+          <div className="grid lg:grid-cols-5 gap-10 sm:gap-16 max-w-[380px] lg:max-w-none mx-auto">
             <div className="lg:col-span-3 reveal text-center sm:text-left">
               <h2 className="text-3xl md:text-5xl font-title mb-8 text-[#0c69e2] dark:text-foreground leading-tight">
                 Donnons vie <br className="sm:hidden" /> à votre projet
