@@ -46,7 +46,8 @@ const Hero = () => {
             <img 
               src={cakeHero} 
               alt="Gâteau d'exception" 
-              fetchPriority="high"
+              // @ts-ignore - fetchpriority existe en HTML mais pas encore dans tous les types React 18
+              fetchpriority="high"
               loading="eager"
               decoding="async"
               className="w-full h-auto object-contain transform group-hover:scale-110 transition-transform duration-700 drop-shadow-2xl"
