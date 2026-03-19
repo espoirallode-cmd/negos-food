@@ -106,7 +106,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <span className="block text-[10px] opacity-60 uppercase tracking-widest font-semibold mb-1">Email</span>
-                        <span className="text-xs sm:text-xl font-medium whitespace-nowrap">contact@negosfood.com</span>
+                        <span className="text-lg sm:text-xl font-medium whitespace-nowrap tracking-tight">contact@negosfood.com</span>
                       </div>
                     </li>
                     <li className="flex items-start gap-4 sm:gap-5">
