@@ -16,7 +16,7 @@ const Hero = () => {
     <section id="accueil" className="relative min-h-[90vh] flex flex-col justify-center pt-24 pb-8 overflow-hidden bg-[#F9FBF9] dark:bg-background px-4 sm:px-6">
       <div className="w-full md:max-w-[1200px] mx-auto md:px-8 flex flex-col lg:flex-row lg:items-center justify-center lg:justify-between gap-12 lg:gap-8 xl:gap-4 flex-grow">
         <div className="relative z-10 flex flex-col items-center lg:items-start w-full lg:w-1/2">
-          <h1 className="reveal text-primary text-[26px] sm:text-4xl md:text-6xl lg:text-7xl font-title tracking-tight leading-[1.3] lg:leading-[1.08] mb-6 text-center lg:text-left w-full">
+          <h1 className="reveal text-primary text-[26px] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-title tracking-tight leading-[1.3] lg:leading-[1.08] mb-6 text-center lg:text-left w-full">
             <span className="block lg:inline">L'Art de Sublimer</span> <br className="hidden lg:block" />
             <span className="block lg:inline lg:whitespace-nowrap"><span className="italic text-primary/80">Chaque Instant</span> Sucré</span>
           </h1>
