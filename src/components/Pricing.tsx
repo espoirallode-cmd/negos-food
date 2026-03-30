@@ -34,7 +34,11 @@ const plans = [
 ];
 
 const Pricing = () => {
-  const [mode, setMode] = useState<"fixe" | "surMesure">("fixe");
+  const [modes, setModes] = useState<Array<"fixe" | "surMesure">>(plans.map(() => "fixe"));
+
+  const setMode = (index: number, mode: "fixe" | "surMesure") => {
+    setModes(prev => prev.map((m, i) => (i === index ? mode : m)));
+  };
 
   return (
     <section id="tarifs" className="py-16 md:py-36 bg-slate-50 dark:bg-background/20 overflow-hidden px-4 md:px-0">
@@ -66,7 +70,7 @@ const Pricing = () => {
 
               {/* Price */}
               <div className={`text-3xl sm:text-4xl font-bold mb-6 transition-all duration-300 ${plan.featured ? "text-white" : "text-[#0c69e2]"}`}>
-                {mode === "fixe" ? (
+                {modes[i] === "fixe" ? (
                   <>
                     {plan.prixFixe.split(' ')[0]} <span className="text-sm opacity-80">{plan.prixFixe.split(' ').slice(1).join(' ')}</span>
                   </>
@@ -75,12 +79,12 @@ const Pricing = () => {
                 )}
               </div>
 
-              {/* Toggle UI — fonctionnel et partagé */}
+              {/* Toggle UI — indépendant par carte */}
               <div className={`flex p-1 rounded-full mb-8 w-40 cursor-pointer ${plan.featured ? "bg-white/10" : "bg-slate-100 dark:bg-white/5"}`}>
                 <button
-                  onClick={() => setMode("fixe")}
+                  onClick={() => setMode(i, "fixe")}
                   className={`flex-1 py-1.5 text-[9px] font-bold rounded-full transition-all ${
-                    mode === "fixe"
+                    modes[i] === "fixe"
                       ? plan.featured
                         ? "bg-white/20 text-white"
                         : "bg-white dark:bg-[#0c69e2] text-[#0c69e2] dark:text-white"
@@ -90,9 +94,9 @@ const Pricing = () => {
                   Fixe
                 </button>
                 <button
-                  onClick={() => setMode("surMesure")}
+                  onClick={() => setMode(i, "surMesure")}
                   className={`flex-1 py-1.5 text-[9px] font-bold rounded-full transition-all ${
-                    mode === "surMesure"
+                    modes[i] === "surMesure"
                       ? plan.featured
                         ? "bg-white/20 text-white"
                         : "bg-white dark:bg-[#0c69e2] text-[#0c69e2] dark:text-white"
@@ -105,7 +109,7 @@ const Pricing = () => {
 
               {/* Features list */}
               <ul className="space-y-3 sm:space-y-5 mb-10 text-left w-full pl-4">
-                {(mode === "fixe" ? plan.features : plan.featuresCustom).map((f, j) => (
+                {(modes[i] === "fixe" ? plan.features : plan.featuresCustom).map((f, j) => (
                   <li key={j} className="flex items-center gap-4 text-[13px] sm:text-sm font-medium">
                     <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${plan.featured ? "bg-white/20" : "bg-[#0c69e2]/10"}`}>
                       <i className={`fas fa-check text-[8px] ${plan.featured ? "text-white" : "text-[#0c69e2]"}`} />
@@ -124,7 +128,7 @@ const Pricing = () => {
                     : "border-2 border-slate-200 dark:border-white/10 text-slate-800 dark:text-white hover:border-[#0c69e2] hover:text-[#0c69e2]"
                 }`}
               >
-                {mode === "surMesure" ? "DEMANDER DEVIS" : plan.cta}
+                {modes[i] === "surMesure" ? "DEMANDER DEVIS" : plan.cta}
               </button>
             </div>
           ))}
