@@ -57,10 +57,7 @@ const Hero = () => {
           <div className="absolute top-10 right-0 w-40 h-40 rounded-full blur-2xl" style={{background: 'rgba(12, 105, 226, 0.25)'}} />
           <div className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full blur-3xl" style={{background: 'rgba(12, 105, 226, 0.20)'}} />
           
-          {/* Decorative dots/shapes */}
-          <div className="absolute top-20 right-10 w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary shadow-xl z-20 animate-bounce-soft">
-            <i className="fas fa-cake-candles text-2xl" />
-          </div>
+
         </div>
       </div>
 
