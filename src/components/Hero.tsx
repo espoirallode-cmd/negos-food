@@ -54,7 +54,6 @@ const Hero = () => {
             />
           </div>
           {/* Decorative accents */}
-          <div className="absolute top-10 right-0 w-40 h-40 rounded-full blur-2xl" style={{background: 'rgba(12, 105, 226, 0.25)'}} />
           <div className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full blur-3xl" style={{background: 'rgba(12, 105, 226, 0.20)'}} />
           
 
