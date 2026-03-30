@@ -29,7 +29,7 @@ const plans = [
     features: ["Pièces montées d'exception", "Buffet complet prestige", "Installation sur site", "Design inédit", "Fleurs comestibles"],
     featuresCustom: ["Création unique signée", "Menu buffet personnalisé", "Installation complète", "Concept sur-mesure", "Éléments floraux choisis"],
     featured: false,
-    cta: "DEMANDER DEVIS",
+    cta: "COMMANDER",
   },
 ];
 
