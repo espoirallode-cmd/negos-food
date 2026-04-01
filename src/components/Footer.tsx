@@ -33,7 +33,7 @@ const Footer = () => (
       </div>
       <div className="h-px bg-slate-100 dark:bg-white/5 mb-6" />
       <p className="text-center text-xs text-slate-400">
-        © 2025 Négo's Food · DHOSSOU Abed Négo · Tous droits réservés.
+        © 2026 Négo's Food · DHOSSOU Abed Négo · Tous droits réservés.
       </p>
     </div>
   </footer>
